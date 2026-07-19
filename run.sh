@@ -53,11 +53,8 @@ echo "✅ 编译成功"
 echo "🚀 运行程序:"
 echo "---------------"
 
-if [ "$EXERCISE_NAME" = "20_mybash" ]; then
-    (cd "$EXERCISE_DIR" && ./20_mybash)
-else
-    "$EXECUTABLE"
-fi
+# 在练习题目录下运行程序，确保相对路径文件能正确找到
+(cd "$EXERCISE_DIR" && "./${EXERCISE_NAME}")
 
 echo ""
 echo "✨ 程序执行完成"
